@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.m_JobComboBox = new System.Windows.Forms.ComboBox();
-            this.m_ReportTextBox = new System.Windows.Forms.TextBox();
-            this.m_AssignJobButton = new System.Windows.Forms.Button();
-            this.m_ShiftNumberBox = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
+            this.m_ShiftNumberBox = new System.Windows.Forms.NumericUpDown();
+            this.m_AssignJobButton = new System.Windows.Forms.Button();
+            this.m_JobComboBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.m_ReportTextBox = new System.Windows.Forms.TextBox();
             this.m_ShiftStartButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_ShiftNumberBox)).BeginInit();
@@ -55,43 +55,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Worker Bee Assignments";
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Worker Bee Job";
-            // 
-            // m_JobComboBox
-            // 
-            this.m_JobComboBox.FormattingEnabled = true;
-            this.m_JobComboBox.Location = new System.Drawing.Point(7, 33);
-            this.m_JobComboBox.Name = "m_JobComboBox";
-            this.m_JobComboBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.m_JobComboBox.Size = new System.Drawing.Size(121, 21);
-            this.m_JobComboBox.TabIndex = 1;
-            this.m_JobComboBox.Items.Add("Stinger Patrol");
-            this.m_JobComboBox.Items.Add("Collect Honey");
-
-            // 
-            // m_ReportTextBox
-            // 
-            this.m_ReportTextBox.Location = new System.Drawing.Point(13, 120);
-            this.m_ReportTextBox.Multiline = true;
-            this.m_ReportTextBox.Name = "m_ReportTextBox";
-            this.m_ReportTextBox.Size = new System.Drawing.Size(259, 130);
-            this.m_ReportTextBox.TabIndex = 1;
-            // 
-            // m_AssignJobButton
-            // 
-            this.m_AssignJobButton.Location = new System.Drawing.Point(7, 61);
-            this.m_AssignJobButton.Name = "m_AssignJobButton";
-            this.m_AssignJobButton.Size = new System.Drawing.Size(187, 33);
-            this.m_AssignJobButton.TabIndex = 2;
-            this.m_AssignJobButton.Text = "button1";
-            this.m_AssignJobButton.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(134, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Shifts";
             // 
             // m_ShiftNumberBox
             // 
@@ -102,14 +73,47 @@
             this.m_ShiftNumberBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.m_ShiftNumberBox.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
             // 
-            // label2
+            // m_AssignJobButton
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(134, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Shifts";
+            this.m_AssignJobButton.Location = new System.Drawing.Point(7, 61);
+            this.m_AssignJobButton.Name = "m_AssignJobButton";
+            this.m_AssignJobButton.Size = new System.Drawing.Size(187, 33);
+            this.m_AssignJobButton.TabIndex = 2;
+            this.m_AssignJobButton.Text = "Assign to a Bee";
+            this.m_AssignJobButton.UseVisualStyleBackColor = true;
+            this.m_AssignJobButton.Click += new System.EventHandler(this.m_AssignJobButton_Click);
+            // 
+            // m_JobComboBox
+            // 
+            this.m_JobComboBox.FormattingEnabled = true;
+            this.m_JobComboBox.Items.AddRange(new object[] {
+            "Stinger patrol",
+            "Nectar collector",
+            "Hive maintenance",
+            "Baby bee tutoring",
+            "Honey manufacturing"});
+            this.m_JobComboBox.Location = new System.Drawing.Point(7, 33);
+            this.m_JobComboBox.Name = "m_JobComboBox";
+            this.m_JobComboBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.m_JobComboBox.Size = new System.Drawing.Size(121, 21);
+            this.m_JobComboBox.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Worker Bee Job";
+            // 
+            // m_ReportTextBox
+            // 
+            this.m_ReportTextBox.Location = new System.Drawing.Point(13, 120);
+            this.m_ReportTextBox.Multiline = true;
+            this.m_ReportTextBox.Name = "m_ReportTextBox";
+            this.m_ReportTextBox.Size = new System.Drawing.Size(259, 130);
+            this.m_ReportTextBox.TabIndex = 1;
             // 
             // m_ShiftStartButton
             // 
