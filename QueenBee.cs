@@ -35,6 +35,7 @@ namespace BeeHive
 
             for (int i = 0; i < mWorkerBee.Length; i++)
             {
+                //TODO: fix bug with mWorkerBee.ShiftsLeft property, as I did not do it properly (infact, I didn't even assign to it correctly)
                 if (mWorkerBee[i].WorkShift()) workReport += "Worker Bee " + (i + 1).ToString() + " finished the task " + mWorkerBee[i].CurrentJob.ToString() + "\r\n";
                 if (string.IsNullOrEmpty(mWorkerBee[i].CurrentJob)) workReport += "Worker Bee " + (i + 1).ToString() + " isn't working! \r\n";
                 else
