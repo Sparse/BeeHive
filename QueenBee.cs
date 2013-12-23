@@ -12,7 +12,6 @@ namespace BeeHive
         private WorkerBee[] mWorkerBee;
         private int mCurrentShiftNumber;
 
-
         public QueenBee(WorkerBee[] pWorkers)
         {
             mWorkerBee = (WorkerBee[])pWorkers.Clone();
@@ -28,20 +27,23 @@ namespace BeeHive
                 if (wasAbleToWork)
                     break;
             }
-
-            if (wasAbleToWork)
-            {
-                MessageBox.Show("BINGO!!");
-            }
-            else MessageBox.Show("FUCK");
-
-            //send pJob and pShifts to bee
-            //search for a bee to work, return true if found, false if not
         }
 
-        private void StartShift()
+        public string StartShift()
         {
+            string workReport = "";
 
+            for (int i = 0; i < mWorkerBee.Length; i++)
+            {
+                if (mWorkerBee[i].WorkShift()) workReport += "Worker Bee " + (i + 1).ToString() + " finished the task " + mWorkerBee[i].CurrentJob.ToString() + "\r\n";
+                if (string.IsNullOrEmpty(mWorkerBee[i].CurrentJob)) workReport += "Worker Bee " + (i + 1).ToString() + " isn't working! \r\n";
+                else
+                if (mWorkerBee[i].ShiftsLeft > 0) workReport += "Worker Bee " + (i + 1).ToString() + " is doing " + mWorkerBee[i].CurrentJob + " for " + mWorkerBee[i].ShiftsLeft.ToString() + " more shifts\r\n";
+                else
+                workReport += " Worker Bee " + (i + 1).ToString() + " will be done with " + mWorkerBee[i].CurrentJob + " after this shift\r\n";       
+            }
+            mCurrentShiftNumber++;
+            return "Shift # " + mCurrentShiftNumber.ToString() + " \r\n" + workReport;
         }
     }
 }

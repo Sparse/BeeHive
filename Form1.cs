@@ -33,5 +33,10 @@ namespace BeeHive
         {
             mQueenBee.AssignWork(m_JobComboBox.SelectedItem.ToString(), (int)m_ShiftNumberBox.Value);
         }
+
+        private void m_ShiftStartButton_Click(object sender, EventArgs e)
+        {
+            m_ReportTextBox.Text = mQueenBee.StartShift();
+        }
     }
 }

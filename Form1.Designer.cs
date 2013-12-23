@@ -123,6 +123,7 @@
             this.m_ShiftStartButton.TabIndex = 2;
             this.m_ShiftStartButton.Text = "Start Shift";
             this.m_ShiftStartButton.UseVisualStyleBackColor = true;
+            this.m_ShiftStartButton.Click += new System.EventHandler(this.m_ShiftStartButton_Click);
             // 
             // Form1
             // 

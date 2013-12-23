@@ -28,7 +28,7 @@ namespace BeeHive
             bool canWorkJob = false;
             for (int i = 0; i < mCapableJobs.Length; i++)
 			{
-			    if (mCapableJobs[i].Contains(pJob))
+			    if (mCapableJobs[i].Contains(pJob) && string.IsNullOrEmpty(mCurrentJob))
 	            {
                     mCurrentJob = pJob;
 		            mShiftsToWork = pShifts;
@@ -37,8 +37,24 @@ namespace BeeHive
 	            }
                 else canWorkJob = false;   
 			}
-            return canWorkJob;
-                    
+            return canWorkJob;                    
+        }
+
+        public bool WorkShift()
+        {
+            if (string.IsNullOrEmpty(mCurrentJob)) { return false; }
+            else
+            {
+                mShiftsWorked++;
+                if (mShiftsWorked > mShiftsToWork)
+                {
+                    mShiftsWorked = 0;
+                    mShiftsToWork = 0;
+                    mCurrentJob = "";
+                    return true;
+                }
+            }
+            return false;
         }
        
     }
