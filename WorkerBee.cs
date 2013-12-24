@@ -46,6 +46,7 @@ namespace BeeHive
             else
             {
                 mShiftsWorked++;
+                mShiftsLeft = (mShiftsToWork - mShiftsWorked);
                 if (mShiftsWorked > mShiftsToWork)
                 {
                     mShiftsWorked = 0;

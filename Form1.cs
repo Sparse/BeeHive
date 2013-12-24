@@ -22,9 +22,9 @@ namespace BeeHive
             { 
                 new WorkerBee( new string[] { "Nectar collector", "Honey manufacturing" } ),
                 new WorkerBee( new string[] { "Egg care", "Baby bee tutoring" } ),
-                new WorkerBee( new string[] { "Hive maintenance", "Sting patrol" } ),
+                new WorkerBee( new string[] { "Hive maintenance", "Stinger patrol" } ),
                 new WorkerBee( new string[] { "Nectar collector", "Honey manufacturing" } ),
-                new WorkerBee( new string[] { "Nectar collector", "Honey manufacturing", "Egg care", "Baby bee tutoring", "Hive maintenance", "Sting patrol" } )
+                new WorkerBee( new string[] { "Nectar collector", "Honey manufacturing", "Egg care", "Baby bee tutoring", "Hive maintenance", "Stinger patrol" } )
             };
             mQueenBee = new QueenBee(mWorkerBees);
         }
