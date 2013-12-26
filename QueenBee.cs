@@ -16,7 +16,6 @@ namespace BeeHive
         {
             mWorkerBee = (WorkerBee[])pWorkers.Clone();
         }
-
         public void AssignWork(string pJob, int pShifts)
         {
             bool wasAbleToWork = false;

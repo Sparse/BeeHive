@@ -109,10 +109,10 @@
             // 
             // m_ReportTextBox
             // 
-            this.m_ReportTextBox.Location = new System.Drawing.Point(13, 120);
+            this.m_ReportTextBox.Location = new System.Drawing.Point(1, 113);
             this.m_ReportTextBox.Multiline = true;
             this.m_ReportTextBox.Name = "m_ReportTextBox";
-            this.m_ReportTextBox.Size = new System.Drawing.Size(259, 130);
+            this.m_ReportTextBox.Size = new System.Drawing.Size(282, 148);
             this.m_ReportTextBox.TabIndex = 1;
             // 
             // m_ShiftStartButton
@@ -134,7 +134,7 @@
             this.Controls.Add(this.m_ReportTextBox);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Bee Hive";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_ShiftNumberBox)).EndInit();

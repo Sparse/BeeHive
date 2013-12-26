@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace BeeHive
 {
-    class WorkerBee
+    class WorkerBee : Bee
     {
         private string mCurrentJob;
         public string CurrentJob { get { return mCurrentJob; } }
 
         private int mShiftsLeft;
-        public int ShiftsLeft { get { return mShiftsLeft; } }
+        public override int ShiftsLeft { get { return mShiftsLeft; } }
         
         private int mShiftsToWork;
         private int mShiftsWorked;
