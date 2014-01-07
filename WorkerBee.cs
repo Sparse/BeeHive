@@ -18,9 +18,16 @@ namespace BeeHive
         private int mShiftsWorked;
         private string[] mCapableJobs;
 
-        public WorkerBee(string[] pCapableJobs)
+        public WorkerBee(string[] pCapableJobs, float pWeight) : base(pWeight)
         {
             mCapableJobs = (string[])pCapableJobs.Clone();
+        }
+
+        public bool NotWorking()
+        {
+            if (string.IsNullOrEmpty(mCurrentJob))
+                return true;
+            else return false;
         }
 
         public bool DoJob(string pJob, int pShifts)

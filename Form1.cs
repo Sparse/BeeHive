@@ -20,11 +20,11 @@ namespace BeeHive
             InitializeComponent();
             mWorkerBees = new WorkerBee[] 
             { 
-                new WorkerBee( new string[] { "Nectar collector", "Honey manufacturing" } ),
-                new WorkerBee( new string[] { "Egg care", "Baby bee tutoring" } ),
-                new WorkerBee( new string[] { "Hive maintenance", "Stinger patrol" } ),
-                new WorkerBee( new string[] { "Nectar collector", "Honey manufacturing" } ),
-                new WorkerBee( new string[] { "Nectar collector", "Honey manufacturing", "Egg care", "Baby bee tutoring", "Hive maintenance", "Stinger patrol" } )
+                new WorkerBee( new string[] { "Nectar collector", "Honey manufacturing" }, 175 ),
+                new WorkerBee( new string[] { "Egg care", "Baby bee tutoring" }, 114 ),
+                new WorkerBee( new string[] { "Hive maintenance", "Stinger patrol" }, 149 ),
+                new WorkerBee( new string[] { "Nectar collector", "Honey manufacturing" }, 155 ),
+                new WorkerBee( new string[] { "Nectar collector", "Honey manufacturing", "Egg care", "Baby bee tutoring", "Hive maintenance", "Stinger patrol" }, 116 )
             };
             mQueenBee = new QueenBee(mWorkerBees);
         }
